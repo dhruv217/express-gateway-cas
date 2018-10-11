@@ -1,0 +1,29 @@
+# Core
+db:
+  redis:
+    emulate: true
+    namespace: EG
+
+plugins:
+  cas:
+    package: express-gateway-plugin-cas
+    DATABASE_URL: 'mysql://root:mysql217root@host.docker.internal:3306/test-cas-eg-gateway'
+    USER_MODEL_PATH: './user_model.js'
+    ADMIN_KEY: '12345678'
+
+crypto:
+  cipherKey: sensitiveKey
+  algorithm: aes256
+  saltRounds: 10
+
+# OAuth2 Settings
+session:
+  secret: keyboard cat
+  resave: false
+  saveUninitialized: false
+accessTokens:
+  timeToExpiry: 7200000
+refreshTokens:
+  timeToExpiry: 7200000
+authorizationCodes:
+  timeToExpiry: 300000

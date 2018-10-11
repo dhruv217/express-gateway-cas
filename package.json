@@ -1,0 +1,13 @@
+{
+  "name": "test-cas",
+  "description": "Express Gateway Instance Bootstraped from Command Line",
+  "repository": {},
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express-gateway": "^1.12.1",
+    "express-gateway-plugin-cas": "^1.1.9",
+    "mysql2": "^1.6.1"
+  }
+}
